@@ -1,13 +1,21 @@
-const { helloWorldUseCase } = require('../business/helloWorldUseCase');
+const { getHelloWorldMessage, getUserMessage } = require('../business/helloWorldUseCase');
 
 function helloWorldController(req, res) {
-    const message = helloWorldUseCase();
-    res.send(message);
+  const message = getHelloWorldMessage();
+  res.send(message);
+}
+
+function userMessageController(req, res) {
+  const { message } = req.body;
+  const response = getUserMessage(message);
+  res.send(response);
 }
 
 module.exports = {
-    helloWorldController,
+  helloWorldController,
+  userMessageController,
 };
+
 
 /* O arquivo helloWorldController.js contém o controlador helloWorldController. 
 Ele importa o caso de uso helloWorldUseCase do diretório business e chama essa f

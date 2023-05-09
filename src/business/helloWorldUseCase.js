@@ -1,10 +1,16 @@
-function helloWorldUseCase() {
-    return "Hello World";
-}
-
-module.exports = {
-    helloWorldUseCase,
-};
+function getHelloWorldMessage() {
+    return 'Hello World';
+  }
+  
+  function getUserMessage(message) {
+    return message;
+  }
+  
+  module.exports = {
+    getHelloWorldMessage,
+    getUserMessage,
+  };
+  
 
 /* O arquivo helloWorldUseCase.js contém o caso de uso helloWorldUseCase, 
 que é responsável por retornar a string 'Hello World'. 

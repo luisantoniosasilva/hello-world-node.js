@@ -1,16 +1,19 @@
 const express = require('express');
-const { helloWorldController } = require('./controller/helloWorldController');
+const { helloWorldController, userMessageController } = require('./controller/helloWorldController');
 
 const app = express();
+app.use(express.json());
 
-app.get('/', helloWorldController);
+app.get('/hello', helloWorldController);
+app.post('/message', userMessageController);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 
+
 /* O arquivo index.js é o ponto de entrada do seu aplicativo.
-Ele importa o controlador helloWorldController do diretório controller.
+Ele importa o controlador helloWorldßController do diretório controller.
 Em seguida, define uma rota para o caminho raiz '/' e associa o controlador a essa rota.
 Quando o cliente acessar essa rota, o controlador helloWorldController será acionado e enviará
 a mensagem 'Hello World' como resposta. O servidor também é iniciado na porta 3000.
