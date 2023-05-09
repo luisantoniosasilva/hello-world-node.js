@@ -1,0 +1,13 @@
+Explicação das pastas:
+
+src: Essa pasta contém todo o código-fonte do projeto.
+
+domain: Esta pasta contém as entidades e regras de negócio do domínio do projeto. Por exemplo, se você estiver trabalhando em um sistema de gerenciamento de usuários, essa pasta pode conter a definição da entidade User e as regras de validação associadas a ela.
+
+business: Essa pasta contém os casos de uso (use cases) ou as classes responsáveis pela lógica de negócio do projeto. Os casos de uso encapsulam a lógica de negócio e interagem com as entidades do domínio. Por exemplo, se você estiver trabalhando em um sistema de autenticação, essa pasta pode conter o caso de uso "AuthenticationUseCase", que lida com a lógica de autenticação do usuário.
+
+controller: Esta pasta contém os controladores ou classes responsáveis por lidar com as requisições HTTP e retornar as respostas apropriadas. Os controladores recebem as requisições, acionam os casos de uso apropriados e retornam as respostas para o cliente. Por exemplo, se você estiver construindo uma API REST, essa pasta pode conter o controlador "UserController", que lida com as requisições relacionadas aos usuários.
+
+framework: Esta pasta contém o código relacionado ao framework ou bibliotecas externas que você está usando no projeto. Por exemplo, se você estiver usando o Express.js como framework para construir sua API, essa pasta pode conter os arquivos relacionados à configuração e à inicialização do Express.js.
+
+test: Esta pasta contém os arquivos de teste, onde você pode escrever testes unitários e de integração para o seu código.
